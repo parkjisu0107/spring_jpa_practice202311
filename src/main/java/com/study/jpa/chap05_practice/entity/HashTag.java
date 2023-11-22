@@ -3,8 +3,8 @@ package com.study.jpa.chap05_practice.entity;
 import lombok.*;
 
 import javax.persistence.*;
-@Setter
-@Getter
+
+@Setter @Getter
 @ToString(exclude = {"post"})
 @EqualsAndHashCode(of = "id")
 @NoArgsConstructor
@@ -24,4 +24,5 @@ public class HashTag {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "post_no")
     private Post post;
+
 }
